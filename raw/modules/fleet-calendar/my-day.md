@@ -46,7 +46,7 @@ View only your assigned stops for the day, navigate to your next patient, and lo
 Your stop cards update in real time as you mark visits started, completed, or delayed. Completed visits show the **Visit Completed** status badge so the scheduler can confirm progress throughout the day.
 
 <Tip>
-Launch the Visit Wizard directly from a stop card by tapping **Start Visit** — the patient and appointment data pre-populate so you do not have to search.
+Launch the Visit Wizard directly from a stop card by tapping **Start Visit**. Fleet Calendar uses **specialty routing**: wound care patients land in the [Wound Cockpit](../visit-wizard-ehr/wound-cockpit.md) first, primary care patients land in the PCP Cockpit. The patient and appointment data pre-populate so you do not have to search.
 </Tip>
 
 <Warning>

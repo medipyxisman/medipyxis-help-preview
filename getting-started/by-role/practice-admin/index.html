@@ -53,7 +53,7 @@
       <p>By the end of this hour your facility is ready for clinical staff to sign in and work. You will have added your clinicians, configured roles, confirmed HR credentials tracking, and verified that referrals, scheduling, and billing routes are correctly wired.</p>
 <h2 id="before-you-start">Before you start</h2>
 <ul>
-<li>You have been provisioned a <code>practice_admin</code> or <code>super_admin</code> account.</li>
+<li>You have been provisioned an <code>admin</code> account for your practice. (Note: <code>super_admin</code> is reserved for Medipyxis internal staff and is not assignable from your own organization.)</li>
 <li>You know your organization's billing NPI, tax ID, and clearinghouse credentials (you can add these later, but now is faster).</li>
 <li>You have the list of clinicians to onboard and their credentials (license numbers, NPI, expiration dates).</li>
 </ul>
@@ -63,14 +63,14 @@
 <li>Verify your facility is listed. If not, click <strong>+ Add Facility</strong> and enter the name, address, timezone, tax ID, and default place-of-service.</li>
 <li>Note the facility's UUID — it's in the URL after <code>/facility/</code>.</li>
 </ol>
-<p>Full guide: <a href="../../admin/facility-setup.md">Admin: Facility setup</a></p>
+<p>Full guide: <a href="/medipyxis-help-preview/admin/facility-setup/">Admin: Facility setup</a></p>
 <h2 id="step-2-configure-roles-10-min">Step 2 — Configure roles (10 min)</h2>
 <ol>
 <li>Click <strong>Administrator</strong> in the sidebar. You land on <strong>Organization Role Config</strong>.</li>
 <li>Review the default roles (<code>nurse</code>, <code>np</code>, <code>md</code>, <code>intake_coordinator</code>, <code>biller</code>, <code>bd_rep</code>, <code>practice_admin</code>).</li>
 <li>Toggle feature access per role. We recommend starting with defaults and only tightening once you see how your team uses the product.</li>
 </ol>
-<p>Full guide: <a href="../../admin/role-config.md">Admin: Role configuration</a></p>
+<p>Full guide: <a href="/medipyxis-help-preview/admin/role-config/">Admin: Role configuration</a></p>
 <h2 id="step-3-add-your-people-20-min">Step 3 — Add your people (20 min)</h2>
 <p>Two paths — pick whichever matches how you have the data:</p>
 <h3 id="fast-path-120-people-one-at-a-time">Fast path (1–20 people): one at a time</h3>
@@ -83,7 +83,7 @@
 <li><strong>HR &amp; Compliance → Bulk Employee Upload</strong>.</li>
 <li>Download the template, fill it in, upload. Medipyxis validates and shows any row-level errors before committing.</li>
 </ol>
-<p>Full guide: <a href="../../admin/user-management.md">Admin: User management</a></p>
+<p>Full guide: <a href="/medipyxis-help-preview/admin/user-management/">Admin: User management</a></p>
 <h2 id="step-4-stand-up-credential-tracking-5-min">Step 4 — Stand up credential tracking (5 min)</h2>
 <ol>
 <li><strong>HR &amp; Compliance → Credential Tracker</strong>. You see a matrix of user × required credential.</li>
@@ -98,14 +98,14 @@ Medipyxis auto-emails the user and their supervisor when a credential is 60, 30,
 <li>Open <strong>Referral Intake</strong>. On first visit the system asks for your inbound <strong>Fax number</strong> and <strong>Intake email</strong> — both forward to Medipyxis's OCR pipeline.</li>
 <li>Provide those numbers to your top referral sources (or keep your existing fax number and forward to ours).</li>
 </ol>
-<p>Full guide: <a href="../../modules/referral-intake/setup.md">Referral Intake: Setup</a></p>
+<p>Full guide: <a href="/medipyxis-help-preview/modules/referral-intake/setup/">Referral Intake: Setup</a></p>
 <h2 id="step-6-wire-billing-10-min">Step 6 — Wire billing (10 min)</h2>
 <ol>
 <li>Open <strong>Billing Operations → Clearinghouse Config</strong> (gear icon, top-right).</li>
 <li>Enter your clearinghouse (Medipyxis supports claim.md natively; contact support for others) and test credentials with the <strong>Send test claim</strong> button.</li>
 <li>Upload your fee schedule: <strong>Client Fee Schedule</strong> tab. Use the CSV template for bulk.</li>
 </ol>
-<p>Full guide: <a href="../../admin/billing-setup.md">Billing: Clearinghouse &amp; fee schedule</a></p>
+<p>Full guide: <a href="/medipyxis-help-preview/admin/billing-setup/">Billing: Clearinghouse &amp; fee schedule</a></p>
 <h2 id="step-7-test-the-loop-5-min">Step 7 — Test the loop (5 min)</h2>
 <ol>
 <li>Create a throwaway referral in <strong>Referral Intake</strong> with test data.</li>
@@ -121,7 +121,7 @@ Medipyxis auto-emails the user and their supervisor when a credential is 60, 30,
 </ul>
 <h2 id="next-up">Next up</h2>
 <ul>
-<li><a href="../../modules/oversight-cockpit/financial-performance.md">Oversight Cockpit: set up ROI tracking</a></li>
+<li><a href="/medipyxis-help-preview/modules/oversight-cockpit/financial-performance/">Oversight Cockpit: set up ROI tracking</a></li>
 <li><a href="../../release-notes/">Release notes</a></li>
 <li><a href="../../admin/">Admin setup &amp; configuration</a></li>
 </ul>

@@ -18,6 +18,10 @@ tags: [onboarding, vendor, graft, ivr]
 
 # Graft vendor first hour
 
+<Warning>
+**Vendor portal not yet implemented.** The dedicated vendor-facing portal described below is on the roadmap but is not live in the current release. Until it ships, vendor reps continue to coordinate POs, shipments, lot data and invoicing through email + fax with the practice's office staff. This page describes the planned experience so admins can prepare; expect changes when the feature goes live.
+</Warning>
+
 By the end of this hour you will have received a purchase order, confirmed a shipment against a lot, uploaded the invoice, and seen your reconciliation status. The vendor portal is read-mostly — your main job is to keep shipments and lot data accurate.
 
 ## Before you start

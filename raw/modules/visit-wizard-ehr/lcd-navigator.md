@@ -1,98 +1,146 @@
 ---
 id: visit-wizard-ehr-lcd-navigator
-title: Complete the LCD Navigator check (step 16)
+title: Use the LCD Navigator V2 (ambient badge, Dojo tiles, copy bank)
 module: visit-wizard-ehr
 audience: [clinician]
 roles: [nurse, np, md, medical_director]
 type: how-to
-estimated_minutes: 5
-last_reviewed: 2026-04-24
+estimated_minutes: 6
+last_reviewed: 2026-05-10
 app_route: /facility/{facility_uuid}/visit-wizard-v2-page
 related:
   - visit-wizard-ehr-overview
+  - visit-wizard-ehr-start-a-visit
   - visit-wizard-ehr-wound-assessment
   - visit-wizard-ehr-sign-off
 prerequisites:
   - visit-wizard-ehr-start-a-visit
   - visit-wizard-ehr-wound-assessment
-tags: [LCD, Medicare, compliance, audit, guardrail, LCD-Navigator]
+tags: [LCD, V2, Medicare, compliance, ambient-badge, Dojo, copy-bank, NPWT, compression, offloading]
 ---
 
-# Complete the LCD Navigator check (step 16)
+# Use the LCD Navigator V2
 
-Review and resolve the LCD Navigator™ compliance checklist at step 16 before the rendering provider can attest and sign the encounter note.
+The LCD Navigator V2 is Medipyxis's embedded Medicare Local Coverage Determination guardrail. Unlike V1, which ran only at the final audit step, V2 is **ambient**: a real-time badge sits at the top of the Visit Wizard, refreshes on every save, and gives clinicians actionable guidance throughout the encounter — not just at sign-off.
 
 ## Before you start
 
-- Steps 1–15 of the Visit Wizard are complete for this encounter.
-- You understand that the LCD Navigator™ cross-references documentation entered in earlier steps against Medicare Local Coverage Determination requirements. It does not replace clinical judgment or legal compliance review.
-- Billing code selections (step 15) are finalized — changing CPT codes after passing the LCD check may invalidate one or more checklist items.
-
-## What is the LCD Navigator™?
-
-The **LCD Navigator™** is Medipyxis's embedded Medicare Local Coverage Determination guardrail. It automatically evaluates data from steps 1–15 and presents a 10-item checklist. Items that are satisfied by existing documentation are pre-checked. Items that require manual attestation or are flagged as incomplete are highlighted for clinician action.
+- You are inside the Visit Wizard V4 for an active encounter.
+- You understand the LCD Navigator cross-references documentation in real time against Medicare LCD requirements. It does not replace clinical judgment or your medical director's compliance review.
 
 <Compliance>
-Passing the LCD Navigator™ checklist does not guarantee Medicare reimbursement. It is a documentation completeness guardrail. Your organization's biller and medical director are responsible for final compliance determinations.
+A green LCD ambient badge means the documented data meets the Navigator's rule set. It does not guarantee Medicare reimbursement. Your organization's biller and medical director are responsible for final compliance determinations.
 </Compliance>
 
-## Steps
+---
 
-1. **Reach step 16.** Complete steps 1–15 in sequence. Click **LCD Audit & Review** in the step navigator or click **Next** from step 15.
+## The ambient badge
 
-   ![LCD Audit & Review screen showing the Navigator panel and auto-populated checklist items](../../assets/visit-wizard/09_lcd_audit_review.png)
+The LCD ambient badge appears at the top of every section in the Visit Wizard. It refreshes on every section save (manual or autosave) and shows one of three states:
 
-   *Step 16 opens the LCD Navigator™ panel. Items auto-populated from prior steps are pre-checked. Items requiring manual action are highlighted in amber.*
+| Color | Meaning | What to do |
+|---|---|---|
+| **Green** | All Navigator checks pass. | Continue documenting. |
+| **Amber** | One or more items need clinician action; the encounter can still be edited. | Click the badge to open the Dojo. |
+| **Red** | A blocking item is missing or invalid. The encounter cannot be attested until resolved. | Click the badge, follow the link back to the offending section, fix it. |
 
-2. **Review the 10-item checklist.** Each item maps to a Medicare LCD requirement. Resolve any item that is not pre-checked.
+![LCD ambient badge with auto-populated checklist items](../../assets/visit-wizard/09_lcd_audit_review.png)
 
-   ![LCD Navigator checklist with all 10 items and their status indicators](../../assets/visit-wizard/10_lcd_audit_checklist.png)
+*The LCD Navigator V2 panel — items auto-populated from prior sections are pre-checked; items requiring action are highlighted in amber.*
 
-   *The full LCD Navigator™ checklist. A green checkmark indicates the item is satisfied by existing documentation. An amber indicator requires clinician action.*
+---
 
-   | # | Checklist Item | How it is satisfied |
-   |---|---|---|
-   | 1 | **Medical necessity statement** | Documented in **Patient Context** (step 2) and **Comorbidities** (step 6) |
-   | 2 | **4-week conservative care documented** | Documented in **Previous Treatments** (step 8) |
-   | 3 | **Dimensions measured today** | **Length (cm)**, **Width (cm)**, and **Depth (cm)** entered in **Wound Assessment** (step 7) |
-   | 4 | **Failed prior therapies listed** | Documented in **Previous Treatments** (step 8) |
-   | 5 | **Appropriate HCPCS/CPT** | CPT codes selected in **Billing & Documentation** (step 15) |
-   | 6 | **MUE/NCCI edits** | Auto-checked against the CMS edit tables for the selected CPT and modifier combination |
-   | 7 | **Modifier validity** | Modifiers (`25`, `59`, `KX`, `JW`, `JZ`) validated against CPT code in step 15 |
-   | 8 | **POS match** | Place of Service code in step 15 matches the facility type on record |
-   | 9 | **Signature present** | Confirmed when **Provider Attestation** (step 17) is completed — shows as pending until then |
-   | 10 | **Plan-of-care dates** | Next-visit interval and goal dates entered in **Care Planning** (step 10) |
+## Dojo tiles — intervention guidance
 
-3. **Resolve any amber items.** For each item not pre-checked, the Navigator shows a link back to the step where the missing data must be entered. Click the link to jump to that step, add the information, and return to step 16.
+Click the ambient badge to open the **Dojo**. The Dojo presents one tile per Navigator item that needs attention. Each tile shows:
 
-   <Note>
-   You can jump back to any previously completed step using the step navigator on the left. After correcting the issue, return to step 16 — the Navigator refreshes automatically.
-   </Note>
+- The Medicare LCD requirement at stake.
+- The wizard section where the missing or invalid data lives.
+- A **Go to section** link that jumps you to the exact field.
+- For items that can be resolved by inserting standardized language, a **Copy** button that pulls from the copy bank.
 
-4. **Confirm any items requiring manual attestation.** Some items (for example, **Medical necessity statement**) require you to read and confirm a brief attestation sentence. Click **Confirm** next to each such item.
+The Dojo refreshes as you resolve items. Items move from amber to green in real time once the underlying data passes the check.
 
-5. **Click Next** once all 10 items show a green checkmark. This advances to step 17, **Provider Attestation**.
+![LCD Dojo tiles and the full checklist](../../assets/visit-wizard/10_lcd_audit_checklist.png)
 
-   <Warning>
-   If you cannot resolve an amber item during the visit, you may **Save Draft** and return later. The encounter note cannot be signed until all 10 LCD Navigator™ items are satisfied.
-   </Warning>
+*The Dojo with the full Navigator checklist; green items are satisfied by existing documentation, amber items require clinician action.*
+
+---
+
+## The copy bank (21 rules)
+
+Expand the Dojo drawer to access the **copy bank**: 21 pre-written compliance statements that satisfy specific LCD rules across three intervention families:
+
+| Family | Rules covered |
+|---|---|
+| **NPWT (Negative Pressure Wound Therapy)** | Indication, conservative-care prerequisite, wound bed status, duration limits, weekly assessment language, discontinuation criteria. |
+| **Compression** | ABI documentation requirement, etiology confirmation (CVI vs. arterial), graduated compression rationale, contraindication review. |
+| **Offloading** | Anatomic location justification, prior failed offloading, plantar pressure rationale, total-contact cast indications, footwear plan. |
+
+To use the copy bank:
+
+1. Click the badge to open the Dojo.
+2. Find the tile for the item you want to satisfy.
+3. Click **Copy** — the statement is inserted into the appropriate field in the linked section.
+4. **Edit the inserted text to match your patient and your clinical reasoning.** The copy bank gives you a compliant starting point; it is not a substitute for individualized documentation.
+
+<Warning>
+Inserted copy must reflect the specific patient. Identical copy across patients can be flagged by Medicare auditors as templated documentation. Always personalize.
+</Warning>
+
+---
+
+## The 14 Navigator checks
+
+The Navigator evaluates documentation against the following items. Most are satisfied automatically when the underlying wizard section is complete.
+
+| # | Checklist Item | How it is satisfied |
+|---|---|---|
+| 1 | **Medical Necessity Statement** | Auto-generated in section 13 (Billing & Documentation) from comorbidities, etiology, and procedure. |
+| 2 | **4-week conservative care documented** | Documented in section 8 (Historic Measurements + Previous Treatments). |
+| 3 | **Dimensions measured today** | Length, Width, Depth entered in section 7 (Wound Assessment). |
+| 4 | **Failed prior therapies listed** | Documented in section 8. |
+| 5 | **Appropriate HCPCS/CPT** | CPT codes generated in section 13. |
+| 6 | **NCCI PTP + MUE edits pass** | Auto-checked against CMS edit tables for the selected CPT/modifier set. |
+| 7 | **Modifier validity** | Modifiers (`25`, `59`, `KX`, `JW`, `JZ`) validated against CPT in section 13. |
+| 8 | **POS match** | Place of Service in section 13 matches the facility type on record. |
+| 9 | **Signature present** | Confirmed when Provider Attestation completes. Shows pending until then. |
+| 10 | **Plan-of-care dates** | Next-visit interval and goal dates entered in section 10. |
+| 11 | **ABI documented (compression cases)** | ABI entered in section 8 — the ABI gate enforces this before compression is selectable. |
+| 12 | **Tissue percentages sum to 100** | Granulation / Slough / Eschar / Epithelial entered in section 7. |
+| 13 | **Precise anatomical location** | Editable location field set in section 7. |
+| 14 | **AI Disclaimer acknowledged (if AI used)** | Acknowledged on first AI draft per encounter. |
+
+---
+
+## Walk-through — resolving an amber item
+
+1. **See the amber badge.** It sits at the top of the wizard regardless of which section is open.
+2. **Click the badge.** The Dojo opens with one tile per outstanding item.
+3. **Click Go to section** on the relevant tile. The wizard jumps to the exact field.
+4. **Enter the missing data.** Save the section.
+5. **Watch the badge refresh.** The item flips from amber to green; the Dojo updates.
+6. **Continue documenting** — or, if all items are now green, proceed to section 14 (LCD Audit & Provider Attestation).
 
 ---
 
 ## Result
 
-All 10 LCD Navigator™ checklist items show a green checkmark. Step 16 is marked complete in the step navigator and you proceed to **Provider Attestation** (step 17).
+The LCD ambient badge is green, the Dojo shows no outstanding items, and the encounter is ready for **Provider Attestation** in section 14. The Navigator result — including which items were auto-satisfied, which required manual confirmation, and which used copy bank insertions — is recorded in the encounter audit log and is available to medical directors and billers for review.
 
-The LCD Navigator™ result — including which items were auto-satisfied and which required manual confirmation — is recorded in the encounter audit log and is available to medical directors and billers for review.
+---
 
 ## Troubleshooting
 
 | Symptom | Likely cause | What to do |
 |---|---|---|
-| Item 3 (**Dimensions measured today**) not pre-checked | Wound measurements were not saved in step 7 | Return to step 7, enter Length, Width, and Depth, then save the wound record |
-| Item 6 (**MUE/NCCI edits**) flagged | A code/modifier combination triggers a CMS edit | Adjust the CPT or modifier in step 15 per your biller's guidance |
-| Item 8 (**POS match**) flagged | Place of Service code does not match the patient's service location type | Correct the POS code in step 15 or contact your billing team |
-| **Next** button disabled after confirming all items | Item 9 (**Signature present**) is always pending at this stage | This resolves automatically when Provider Attestation is completed in step 17; proceed |
+| Badge stays amber after saving the offending section | Section did not save (offline outbox pending, or validation failed) | Confirm the section navigator shows a checkmark; if offline, sync via [Work Offline](./work-offline.md). |
+| Item 3 (**Dimensions measured today**) not pre-checked | Measurements were not saved in section 7 | Return to section 7, enter Length, Width, Depth, save. |
+| Item 6 (**NCCI/MUE**) flagged red | A CPT/modifier combination triggers a CMS edit | Adjust the CPT or modifier in section 13 per your biller's guidance. |
+| Item 8 (**POS match**) flagged | Place of Service does not match the patient's service location type | Correct the POS code in section 13 or contact your billing team. |
+| Item 11 (**ABI documented**) flagged red | Compression is documented without an ABI on file | Enter ABI in section 8 — the ABI gate also blocks the compression order itself. |
+| Copy bank inserted but item stays amber | The copy was inserted but the section was not saved | Save the section that received the inserted text. |
+| **Attest & Sign** disabled with all items green | Item 9 (**Signature present**) is always pending pre-attestation | Sign on the attestation pad — item 9 resolves automatically as the signature lands. |
 
 ## Related
 

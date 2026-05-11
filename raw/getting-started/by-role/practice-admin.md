@@ -22,7 +22,7 @@ By the end of this hour your facility is ready for clinical staff to sign in and
 
 ## Before you start
 
-- You have been provisioned a `practice_admin` or `super_admin` account.
+- You have been provisioned an `admin` account for your practice. (Note: `super_admin` is reserved for Medipyxis internal staff and is not assignable from your own organization.)
 - You know your organization's billing NPI, tax ID, and clearinghouse credentials (you can add these later, but now is faster).
 - You have the list of clinicians to onboard and their credentials (license numbers, NPI, expiration dates).
 

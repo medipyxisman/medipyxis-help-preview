@@ -1,6 +1,6 @@
 ---
 id: visit-wizard-ehr-wound-assessment
-title: Complete the Wound Assessment (step 7)
+title: Complete the Wound Assessment (section 7)
 module: visit-wizard-ehr
 audience: [clinician]
 roles: [nurse, np, md]
@@ -18,9 +18,13 @@ prerequisites:
 tags: [wound-assessment, EHR, measurements, tissue, exudate, LCD, Medicare, photo]
 ---
 
-# Complete the Wound Assessment (step 7)
+# Complete the Wound Assessment (section 7)
 
-Document all active wounds in step 7 of the Visit Wizard, capturing anatomy, measurements, tissue composition, exudate, pain, and photos needed for Medicare LCD compliance and longitudinal wound tracking.
+Document all active wounds in section 7 of the Visit Wizard V4, capturing anatomy, measurements, **tissue percentages by wound**, **precise anatomical location**, exudate, pain, and photos needed for Medicare LCD compliance and longitudinal wound tracking.
+
+<Note>
+In V4 the merged section 8 (Historic Measurements + Previous Treatments) is where the **ABI gate** triggers — if you intend to order compression, ABI must be on file before you can advance. See [Visit Wizard V4 overview](./overview.md).
+</Note>
 
 ## Before you start
 
@@ -47,7 +51,7 @@ Document all active wounds in step 7 of the Visit Wizard, capturing anatomy, mea
    | Field | Details |
    |---|---|
    | **Wound #** | Auto-assigned; read-only for existing wounds |
-   | **Anatomic Location** | Free-text anatomic site (for example, "Right plantar heel") |
+   | **Anatomic Location** | Editable, precise anatomic site (for example, `Right lateral malleolus`). The location field is now editable per-wound in V4. |
    | **Laterality** | `L` (Left) · `R` (Right) · `B` (Bilateral) |
    | **Onset Date** | Calendar picker |
    | **Duration (weeks)** | Auto-calculated from Onset Date; editable |
@@ -173,7 +177,7 @@ If any required field is missing or tissue percentages do not sum to 100, the wi
 
 ## Result
 
-Each wound has a saved assessment record with measurements, tissue composition, exudate, pain score, infection status, and at least one photo. This data flows into the **LCD Navigator™** at step 16 to verify that **Dimensions measured today** and other checklist items are satisfied.
+Each wound has a saved assessment record with measurements, tissue composition, exudate, pain score, infection status, and at least one photo. On save, the **LCD audit** fires automatically and refreshes the [LCD ambient badge](./lcd-navigator.md) — items like **Dimensions measured today**, **Tissue percentages sum to 100**, and **Precise anatomical location** flip from amber to green as soon as the data is on file.
 
 <Tip>
 If you document more than one wound, use the wound thumbnail strip at the top of step 7 to switch between wounds without losing your place in the form.

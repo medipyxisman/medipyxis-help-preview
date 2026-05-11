@@ -23,7 +23,7 @@ Every Medipyxis session starts with two choices: *who am I* and *which facility 
 1. **Go to `https://app.medipyxis.com/login`.** Your practice admin may have a vanity subdomain — if so, use the one they gave you; it works the same way.
 2. **Enter your email and password.** If this is your first login, click **First time? Set password** and check your email for the magic link. Passwords must be 12+ characters with one number and one symbol.
 3. **Click Sign in.** You land on the **Dashboard**.
-4. **Check the top-left header.** The text next to the Medipyxis logo shows your current **Organization**. Below it, your profile card on the top-right shows your role and current **Facility** (for example, "admin • Prod Test").
+4. **Check the top-left header.** The text next to the Medipyxis logo shows your current **Organization**. Below it, your profile card on the top-right shows your role and current **Facility** (for example, "Admin • Premiere Wound Care").
 5. **Switch facility (if you have access to more than one).** Click the **Organization Selector** in the top-left and pick the facility you want. Every sidebar link now scopes to that facility — the URL changes from `/facility/{old-uuid}/...` to `/facility/{new-uuid}/...`.
 
 ## Result
@@ -40,7 +40,7 @@ Facility is "sticky" — Medipyxis remembers the last facility you used and take
 |---|---|---|
 | **Medipyxis logo** | Top-left | Click to return to your dashboard |
 | **Organization Selector** | Top-left, next to logo | Switch facility/organization |
-| **Quick Jump** | Top-center | Press ⌘K / Ctrl+K to search anything |
+| **Quick Jump** | Top-center | Press `⌘K` / `Ctrl+K` to search anything |
 | **Notifications bell** | Top-right | Shows urgent action items with badge count |
 | **Profile menu** | Far top-right | Your name, role, facility — click to edit profile or sign out |
 

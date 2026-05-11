@@ -54,8 +54,8 @@
 <h2 id="before-you-start">Before you start</h2>
 <ul>
 <li>You need <code>practice_admin</code> or <code>super_admin</code> role.</li>
-<li>Roles must already be configured at <code>/administrator</code> before you assign them. See <a href="./role-config.md">Role Config</a>.</li>
-<li>For bulk upload, prepare a CSV using the template described in <a href="./data-import-export.md">Data Import &amp; Export</a>.</li>
+<li>Roles must already be configured at <code>/administrator</code> before you assign them. See <a href="/medipyxis-help-preview/admin/role-config/">Role Config</a>.</li>
+<li>For bulk upload, prepare a CSV using the template described in <a href="/medipyxis-help-preview/admin/data-import-export/">Data Import &amp; Export</a>.</li>
 </ul>
 <h2 id="invite-a-single-user">Invite a single user</h2>
 <ol>
@@ -64,7 +64,7 @@
 <li>Click <strong>Facility Users</strong>.</li>
 <li>Click <strong>Invite User</strong>.</li>
 <li>Enter the user's <strong>Email</strong>, <strong>First Name</strong>, and <strong>Last Name</strong>.</li>
-<li>Select their <strong>Role</strong> from the dropdown. Available roles are those seeded in <strong>Organization Role Config</strong> (see <a href="./role-config.md">Role Config</a>).</li>
+<li>Select their <strong>Role</strong> from the dropdown. Available roles are those seeded in <strong>Organization Role Config</strong> (see <a href="/medipyxis-help-preview/admin/role-config/">Role Config</a>).</li>
 <li>If the role is <code>bd_rep</code>, set the <strong>Assigned Clinician</strong> field — this links the rep's activity to a specific clinician's territory for BD reporting.</li>
 <li>Click <strong>Send Invite</strong>. The user receives an email with a magic link valid for 48 hours.</li>
 </ol>
@@ -123,7 +123,7 @@ Changing a role takes effect immediately. If you demote a user from <code>practi
 <li>The system previews a validation table — review any rows flagged in red (typically duplicate email or unknown role name).</li>
 <li>Click <strong>Confirm Upload</strong>. Invite emails go out in batches; all users receive their magic link within five minutes.</li>
 </ol>
-<p>See <a href="./data-import-export.md">Data Import &amp; Export</a> for the full column spec and a downloadable sample file.</p>
+<p>See <a href="/medipyxis-help-preview/admin/data-import-export/">Data Import &amp; Export</a> for the full column spec and a downloadable sample file.</p>
 <h2 id="result">Result</h2>
 <p>Invited users appear in <strong>Facility Users</strong> with status <code>Invite Pending</code>. Once they set their password, status changes to <code>Active</code>. Users who do not accept within 48 hours need a resent invite — click <strong>Resend</strong> next to their row.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
@@ -139,7 +139,7 @@ Changing a role takes effect immediately. If you demote a user from <code>practi
 <tr>
 <td>Role dropdown is empty</td>
 <td>No roles configured yet</td>
-<td>Complete <a href="./role-config.md">Role Config</a> first</td>
+<td>Complete <a href="/medipyxis-help-preview/admin/role-config/">Role Config</a> first</td>
 </tr>
 <tr>
 <td>Invite email not received</td>

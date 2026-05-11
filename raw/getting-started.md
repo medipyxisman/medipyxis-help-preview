@@ -15,7 +15,11 @@ tags: [onboarding, welcome]
 
 # Welcome to Medipyxis
 
-Medipyxis is the operating system for mobile wound care — one login replaces the seven-plus apps your team used to juggle. This guide gets you productive in your first hour.
+Welcome aboard. Medipyxis is the operating system for mobile wound care — one login replaces the seven-plus apps your team used to juggle.
+
+**Start here:** scroll down to **Your first hour, by role** and click the path that matches your job. Each one is a short, guided sequence that ends with you having completed one real piece of work. If you're not sure which role to pick, ask your practice admin — the role assigned to your user determines what the rest of the product looks like.
+
+This page is your front door; the rest of this section follows the same order you'll see in the left sidebar: **Welcome → Log in and set your facility → Tour of your dashboard → By role**.
 
 ## What Medipyxis replaces
 
@@ -29,9 +33,14 @@ Medipyxis is the operating system for mobile wound care — one login replaces t
 | Separate CRM for referral sources | **Business Development** + **CRM** |
 | Monthly KPI decks | **Oversight Cockpit** (live) |
 
+## Welcome
+
+- [Log in and set your working facility](./login-and-setup.md) — two minutes to get the right facility selected and your session HIPAA-active.
+- [Tour of your dashboard](./your-dashboard.md) — what every panel on the home screen does.
+
 ## Your first hour, by role
 
-Click the path that matches your job. Each one is a short, guided sequence that ends with you having completed one real piece of work.
+Pick the path that matches your job. Each one ends with you having completed one real piece of work.
 
 - **I'm a clinician** (RN, NP, MA, MD) → [Clinician first hour](./by-role/clinician.md)
 - **I'm a practice admin / ops manager** → [Practice admin first hour](./by-role/practice-admin.md)
